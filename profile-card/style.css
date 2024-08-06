@@ -1,3 +1,10 @@
+:root{
+  --primary-color:rgba(103, 125, 106, 1);
+  --secondary-color:rgba(214, 189, 152, 1);
+  --primary-dark: rgb(60, 59, 59);
+  --primary-light:#ffffff;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -7,8 +14,17 @@ a {
   color: darkgray;
   transition: all 0.5s;
 }
+img:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
 a:hover {
-  color: rgba(103, 125, 106, 1);
+  color: var(--primary-color);
+}
+.connections h1:hover{
+  background: linear-gradient(90deg, var(--secondary-color)0%, var(--primary-color) 49%, var(--primary-color) 72%);
+  background-clip: text;
+  color: transparent;
 }
 body {
   padding: 5rem 0;
@@ -17,37 +33,157 @@ body {
   align-items: center;
   background: linear-gradient(
     180deg,
-    rgba(214, 189, 152, 1) 0%,
-    rgba(103, 125, 106, 1)
+    var(--secondary-color) 0%,
+    var(--primary-color)
   );
+}
+
+
+
+.container {
+  width: 50%;
+  height: 35rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: -75px;
+}
+.waves{
+  width: 100%;
+  height: 100%;
+}
+.profile {
+  width: 8rem;
+  height: 8rem;
+  filter:grayscale(40%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.9s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.profile:hover{
+  width: 9rem;
+  height: 9rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.connections {
+  margin-top: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40%;
+}
+.connections h1{
+  color: var(--primary-dark);
+  transition: all 0.8s;
+}
+
+.social {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.social i {
+  padding: 0.2rem;
+  font-size: 2.5rem;
+  transition: all 0.5s;
+}
+.social a {
+  color: var(--primary-dark);
+}
+.social i:hover {
+  color: var(--primary-color);
+}
+
+.bio {
+  width: 80%;
+  height: 30%;
+  text-align: justify;
+  color: var(--primary-dark);
+}
+
+.connecting {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  border: none;
+  box-shadow:var(--secondary-color) 0px 30px 90px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.9rem;
+  margin-right: 0.5rem;
+  width: 50%;
+  border-radius: 1rem;
+  transition: all 0.7s;
+}
+.follow {
+  color: var(--primary-dark);
+  background-color: var(--primary-color)
+}
+.follow:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border: solid var(--primary-color);
+}
+.message {
+  border: solid var(--primary-color);
+  color: var(--primary-color)
+}
+.message:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-light);
 }
 
 @media (max-width: 590px) {
   .container {
-    height: 29rem !important;
+    height: 29rem ;
   }
   .container .waves {
-    top: -100px !important;
+    top: -100px;
   }
   .container .profile {
-    width: 3rem !important;
-    height: 3rem !important;
-    top: 6.8rem !important;
+    width: 4rem  !important;
+    height: 4rem  !important;
+    top: 6.2rem  !important;
   }
   .container .connections {
-    margin-top: 5rem !important;
-    font-size: 0.6rem !important;
+    margin-top: 5rem ;
+    font-size: 0.6rem ;
   }
   .container .connections .social i {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem ;
   }
   .bio {
-    font-size: 0.7rem !important;
-    height: 30% !important;
+    font-size: 0.7rem ;
+    height: 30% ;
   }
   .container .connecting .btn {
-    font-size: 0.6rem !important;
-    padding: 0.6rem !important;
+    font-size: 0.6rem ;
+    padding: 0.6rem ;
   }
 }
 
@@ -80,105 +216,4 @@ body {
   .container .waves {
     top: -90px;
   }
-}
-
-.container {
-  width: 50%;
-  height: 35rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border-radius: 1rem;
-  overflow: hidden;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.waves {
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  top: -75px;
-}
-.profile {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 6rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-img {
-  width: 100%;
-  height: auto;
-}
-
-.connections {
-  margin-top: 13rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 40%;
-}
-.social {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-}
-.social i {
-  padding: 0.2rem;
-  font-size: 2.5rem;
-  transition: all 0.5s;
-}
-.social a {
-  color: rgb(60, 59, 59);
-}
-.social i:hover {
-  color: rgba(103, 125, 106, 1);
-}
-
-.bio {
-  width: 80%;
-  height: 30%;
-  text-align: justify;
-}
-
-.connecting {
-  width: 80%;
-  height: 20%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.btn {
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.9rem;
-  margin-right: 0.5rem;
-  width: 50%;
-  border-radius: 1rem;
-  transition: all 0.5s;
-}
-.follow {
-  background-color: rgba(103, 125, 106, 1);
-}
-.follow:hover {
-  background-color: #ffffff;
-  color: rgba(103, 125, 106, 1);
-  border: solid rgba(103, 125, 106, 1);
-}
-.message {
-  border: solid rgba(103, 125, 106, 1);
-  color: rgba(103, 125, 106, 1);
-}
-.message:hover {
-  background-color: rgba(103, 125, 106, 1);
-  color: #ffffff;
 }
