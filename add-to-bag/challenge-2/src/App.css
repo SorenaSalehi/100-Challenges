@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #1230ae;
+  --primary-bg: #6c48c5;
+  --primary-light: #fff7f7;
+  --secondary-color: #c68fe6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+}
+main {
+  margin: 5dvh auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  height: 90dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* img .img-display */
+.img-display {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary-light);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img-display main {
+  width: 80%;
+  height: auto;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  align-self: flex-start;
+  background-color: var(--primary-light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.img-display main img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.img-display aside {
+  width: 20%;
+  height: auto;
+}
+.img-display aside div {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.img-display aside div img {
+  width: 100%;
+  height: auto;
+
+  border-radius: 1rem;
+}
+
+.blur {
+  filter: blur(1px);
+}
+
+/* description **************** */
+
+.description {
+  width: 30%;
+  line-height: 2rem;
+}
+.title-yellow {
+  color: yellow;
+}
+.title-blue {
+  color: blue;
+}
+.description h4 span {
+  padding: 0.2rem;
+  border-radius: 1rem;
+  background-color: var(--primary-light);
+  color: red;
+}
+.description h5 {
+  text-decoration: line-through;
+  color: var(--primary-light);
+}
+.size {
+  margin: 0.6rem 0;
+}
+
+.description button {
+  margin: 0.1rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: var(--primary-light);
+  background-color: var(--primary-bg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.description button:hover {
+  transform: translateY(-5px);
+}
+.description button:focus {
+  background-color: var(--primary-light);
+  color: var(--primary-bg);
+}
